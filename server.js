@@ -1,7 +1,9 @@
 const express=require('express');
 const mongoose=require('mongoose');
 const app=express();
+const cors = require('cors')
 app.use(express.json());
+app.use(cors());
 
 mongoose.connect('mongodb+srv://dharanitharanit23_db_user:OjllhsMQPKqwNTeN@cluster0.cuh0mlr.mongodb.net/?appName=Cluster0').then(()=>{
     console.log("Database connected");
